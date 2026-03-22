@@ -1,0 +1,353 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  background-color: #fce4ec; /* rosa claro */
+}
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+
+.content {
+  margin-left: 200px; /* igual al ancho de tu sidebar */
+  padding: 20px;
+  width: calc(100% - 200px);
+  background-color: #fce4ec; /* rosa claro */
+}
+
+.sidebar {
+ position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #e91e63; /* Color fucsia */
+  padding-top: 20px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.sidebar ul li {
+  margin: 8px 0;
+}
+
+.sidebar ul li a {
+   color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+   background-color: transparent; /* no cambia fondo */
+  color: #4a148c; /* morado oscuro */
+}
+
+
+.profile {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile img {
+  width: 175px; /* ajusta según tu imagen */
+  height: 175px;
+  border-radius: 50%; /* círculo */
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.profile h3 {
+  color: white;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+
+section {
+  padding: 60px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+.download-cv {
+  position: relative;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+#cv-btn {
+  background-color: #4a148c; /* morado oscuro */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  width: 90%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#cv-btn:hover {
+  background-color: #6a1b9a; /* morado más claro */
+}
+
+#cv-menu {
+  position: absolute; /* NUEVO */
+  top: 100%; /* justo debajo del botón */
+  left: 50%; /* centra horizontalmente */
+  transform: translateX(-50%); /* ajuste fino para centrar */
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  background-color: #8554d2; /* fucsia */
+  border-radius: 5px;
+  z-index: 1000; /* para que aparezca encima de otros elementos */
+  width: 120px; 
+}
+
+
+#cv-menu li a {
+  display: block;
+  padding: 4px 0; /* antes era 8px, ahora la mitad */
+  color: white;
+  text-decoration: none;
+  font-size: 14px; /* opcional: tamaño de letra más pequeño si lo prefieres */
+}
+
+
+#cv-menu li a:hover {
+  background-color: #c2185b; /* fucsia oscuro */
+}
+
+/* Clase para mostrar menú */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: white;
+}
+
+#projects {
+  padding: 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a148c; /* morado oscuro o tu color corporativo */
+}
+
+#skills {
+  padding: 20px;
+}
+
+#skills h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a148c; /* morado oscuro o tu color corporativo */
+}
+#skills h3 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+#formacion {
+  padding: 20px;
+  
+}
+
+#formacion h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a148c; /* morado oscuro o tu color corporativo */
+}
+#formacion h3 {
+  text-align: left;
+  margin-bottom: 10px;
+  
+}
+.education-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.education-item img {
+  width: 150px; /* ajusta el tamaño según los logos */
+  height: auto;
+  margin-right: 15px;
+}
+
+
+.education-details h3 {
+  text-align: left;
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.education-details p {
+  text-align: left;
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+#contact {
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* espacio entre iconos */
+  margin-top: 15px;
+}
+
+.contact-icon img {
+  width: 60px; /* tamaño de iconos */
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%; /* hace las imágenes circulares */
+  border: 2px solid #e91e63; /* borde fucsia */
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.contact-icon img:hover {
+  transform: scale(1.1);
+  border-color: #c2185b; /* borde fucsia oscuro al pasar el ratón */
+}
+
+.typing::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Contenedor general de la sección skills */
+#skills {
+  padding: 20px;
+}
+
+/* Título centrado */
+#skills h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grid solo para los iconos */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+ 
+}
+
+/* Cada círculo con icono */
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f8bbd0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.circle img {
+  max-width: 60%;
+  max-height: 60%;
+  position: absolute;
+  transition: opacity 0.3s;
+}
+
+
+.circle .skill-name {
+  position: absolute;
+  color: #4a148c;
+  font-size: 0.75em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: center;
+  padding: 5px;
+}
+
+.circle:hover img {
+  opacity: 0;
+}
+
+.circle:hover .skill-name {
+  opacity: 1;
+}
+
+
+ #projects {
+    padding: 2rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .project-card {
+    background: #f3f3f3;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1; /* Cuadrado */
+    overflow: hidden;
+  }
+
+  .project-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  iframe, video, audio, pre {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow: auto;
+    font-size: 0.8rem;
+  }
