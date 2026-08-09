@@ -2,16 +2,13 @@
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.sidebar ul li a');
-
   let current = '';
-
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     if (pageYOffset >= sectionTop - 60) {
       current = section.getAttribute('id');
     }
   });
-
   navLinks.forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href') === '#' + current) {
@@ -20,10 +17,8 @@ window.addEventListener('scroll', () => {
   });
 });
 
-
 const cvBtn = document.getElementById('cv-btn');
 const cvMenu = document.getElementById('cv-menu');
-
 cvBtn.addEventListener('click', () => {
   if (cvMenu.classList.contains('hidden')) {
     cvMenu.classList.remove('hidden');
@@ -34,12 +29,9 @@ cvBtn.addEventListener('click', () => {
   }
 });
 
-
-
 const phrases = [
-  "Hola, soy Margarita! Bienvenid@ a mi porfolio"
+  "Hola, soy Margarita"
 ];
-
 const typingElement = document.querySelector(".typing");
 let phraseIndex = 0;
 let charIndex = 0;
@@ -47,7 +39,7 @@ let isDeleting = false;
 
 function type() {
   const currentPhrase = phrases[phraseIndex];
-  
+
   if (isDeleting) {
     typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
     charIndex--;
@@ -55,9 +47,7 @@ function type() {
     typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
     charIndex++;
   }
-
   let typingSpeed = isDeleting ? 50 : 100;
-
   if (!isDeleting && charIndex === currentPhrase.length) {
     typingSpeed = 2000; // Pausa al terminar frase
     isDeleting = true;
@@ -67,8 +57,6 @@ function type() {
     if (phraseIndex >= phrases.length) phraseIndex = 0;
     typingSpeed = 500;
   }
-
   setTimeout(type, typingSpeed);
 }
-
 document.addEventListener("DOMContentLoaded", type);
